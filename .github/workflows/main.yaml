@@ -28,7 +28,7 @@ jobs:
 
       - name: Build SAM Application
         run: |
-          sam build -t template.yaml
+          sam build -t ./sam-arch/template.yaml
 
       - name: Deploy SAM Application
         env:

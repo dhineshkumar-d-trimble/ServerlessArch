@@ -17,7 +17,7 @@ Resources:
   MyApi:
     Type: AWS::Serverless::Api
     Properties:
-      Name: MyApi
+      Name: ServerlessDemo
       StageName: Prod
       Auth:
         DefaultAuthorizer: CognitoAuthorizer
@@ -39,7 +39,7 @@ Resources:
         HelloWorld:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
-            RestApiId: !Ref MyApi
+            RestApiId: !Ref ServerlessDemo
             Path: /hello
             Method: get
 
@@ -55,7 +55,7 @@ Resources:
         HelloWorld:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
-            RestApiId: !Ref MyApi
+            RestApiId: !Ref ServerlessDemo
             Path: /hello/all
             Method: get
 
@@ -64,7 +64,7 @@ Resources:
 Outputs:
   HelloWorldApi:
     Description: API Gateway endpoint URL for Prod stage for Hello World function
-    Value: !Sub "https://${MyApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
+    Value: !Sub "https://${ServerlessDemo}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
   HelloWorld:
     Description: Hello World Lambda Function ARN
     Value: !GetAtt HelloWorld.Arn

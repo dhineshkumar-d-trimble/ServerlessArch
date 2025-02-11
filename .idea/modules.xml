@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/OAuth/OAuth.iml" filepath="$PROJECT_DIR$/OAuth/OAuth.iml" />
       <module fileurl="file://$PROJECT_DIR$/ServerlessArch.iml" filepath="$PROJECT_DIR$/ServerlessArch.iml" />
     </modules>
   </component>

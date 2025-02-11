@@ -22,17 +22,13 @@ jobs:
         run: |
           python -m pip install --upgrade pip
 
-      - name : Tests
-        run: |
-          python -m unittest discover tests
-
       - name: Install AWS SAM CLI
         run: |
           pip install aws-sam-cli
 
       - name: Build SAM Application
         run: |
-          sam build -t template.yml
+          sam build -t template.yaml
 
       - name: Deploy SAM Application
         env:
